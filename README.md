@@ -2,7 +2,7 @@
 
 > * GitHub Page使用jekyII模板搭建博客
 > * 我的博客地址 : [https://licaibo.github.io](https://licaibo.github.io)
-> * 感谢 : [https://github.com/liungkejin] (https://github.com/liungkejin）
+> * 感谢 : [https://github.com/liungkejin](https://github.com/liungkejin)
 
 
 # 使用说明
