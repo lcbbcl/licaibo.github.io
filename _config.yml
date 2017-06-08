@@ -1,5 +1,5 @@
 # Site settings
-title: lemon
+title: Li Cai Bo
 description: life && work
 favicon: /assets/img/avatar.JPG
 baseurl:
@@ -11,7 +11,7 @@ rss_url:
 highlight: true
 #highlighter: rouge
 
-timezone: Asia/Shanghai
+timezone: Asia/HaiNan
 
 markdown: kramdown
 kramdown:
