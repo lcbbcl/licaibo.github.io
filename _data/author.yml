@@ -2,7 +2,7 @@
 name: lemon
 title: JAVA 开发工程师
 address: 中国, 海南
-email: 87110@foxmail.com
+email: 871107274@qq.com
 github: https://github.com/licaibo
 gavatar: /assets/img/avatar.JPG
 workHistory:
@@ -20,7 +20,7 @@ workHistory:
   title: JAVA 开发工程师
   started: 2015
   duration: (2015.8 - 2017.02)
-  description: 负责电商平台和爬虫开发
+  description: 负责电商平台功能和爬虫数据抓取
 
 - work1:
   company: 北京开科唯识有限公司(深圳)
