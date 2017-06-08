@@ -1,40 +1,30 @@
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Favicon Icon -->
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/{{ site.favicon }}">
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-    <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-    <meta name="description"
-          content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ "/assets/css/bootstrap.min.css" | prepend: site.baseurl }}">
+  <!-- <link rel="stylesheet" href="{{ "/assets/css/icard_resume.css" | prepend: site.baseurl }}"> -->
+  <link rel="stylesheet" href="{{ "/assets/css/font-awesome.min.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/assets/css/blog.css" | prepend: site.baseurl }}" >
+  <link rel="stylesheet" href="{{ "/assets/css/syntax.css" | prepend: site.baseurl }}">
 
-    <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <link rel="icon" type="image/png" href="{{ site.favicon }}">
 
-    <!-- Third-Party CSS -->
-    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/bower_components/octicons/octicons/octicons.css">
-    <link rel="stylesheet" href="/bower_components/hover/css/hover-min.css">
-    <link rel="stylesheet" href="/bower_components/primer-markdown/dist/user-content.min.css">
-    <link rel="stylesheet" href="/assets/css/syntax.css">
+  <!-- Google fonts -->
+  <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans:300' type='text/css'>
+  <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Source+Sans+Pro' type='text/css'>
 
-    <!-- My CSS -->
-    <link rel="stylesheet" href="/assets/css/common.css">
-
-    <!-- CSS set in page -->
-    {% for css in page.css %}
-    <link rel="stylesheet" href="/assets/css/{{css}}">
-    {% endfor %}
-
-    <!-- CSS set in layout -->
-    {% for css in layout.css %}
-    <link rel="stylesheet" href="/assets/css/{{css}}">
-    {% endfor %}
-
-    <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.min.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+  <![endif]-->
 
 </head>
