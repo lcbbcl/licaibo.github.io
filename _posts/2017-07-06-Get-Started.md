@@ -14,7 +14,7 @@ pulished: true
 
 
 
-## 1、自定义注解
+## (1) 自定义注解
 
 自定义注解用于标识需要拦截的方法，可以是主题和类型等，具体视情况而定
 
@@ -33,7 +33,7 @@ public @interface Log {
 }
 ```
 
-## 2、定义Spring AOP切面
+## (2) 定义Spring AOP切面
 Spring AOP提供了几种注解用于不同的场景。我的工程是SpringBoot项目，在这里选择了@AfterReturning，在方法执行完后再去执行，并且用@Async声明了该方法是异步的执行。
 注：SpringBoot使用@Async需要在启动时加上@EnableAsync
 > * @Before 在拦截方法执行前执行
@@ -48,7 +48,7 @@ Spring AOP提供了几种注解用于不同的场景。我的工程是SpringBoot
 @Component
 public class LogAop {
 
-private static final Logger logger=LoggerFactory.getLogger(FileOperateLogAop.class);
+private static final Logger logger=LoggerFactory.getLogger(LogAop.class);
 
     //声明AOP切入点，凡是使用了@Log的方法均被拦截
     @Pointcut("@annotation(com.lcb.demo.annotation.Log)")
@@ -77,7 +77,7 @@ private static final Logger logger=LoggerFactory.getLogger(FileOperateLogAop.cla
 
 ```
 
-## 3、声明@Log注解
+## (3) 在方法上声明@Log注解
 
 ```java
 
