@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post_layout
 title: 开篇
 time: 2017年06月08日 星期四
@@ -13,3 +13,4 @@ pulished: true
 ### 后续
 以后的工作的技术博客都写到这里，用Git统一管理，并用Markdown编写，养成一个良好的习惯。
 本地写好后，push到仓库，博客就可以自动发布了。
+
