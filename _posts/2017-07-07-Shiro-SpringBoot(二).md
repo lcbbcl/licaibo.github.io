@@ -203,7 +203,7 @@ public class FreeMarkerConfig implements InitializingBean {
 </@shiro.lacksRole>
 
 <@shiro.hasPermission name="查看用户模块">
-	 <p>只有拥有【查看用户模块】资源的用户才能看到这段文字</p>
+	<p>只有拥有【查看用户模块】资源的用户才能看到这段文字</p>
 </@shiro.hasPermission>
 
 <@shiro.guest>
