@@ -6,10 +6,6 @@ location: 海南 海口
 pulished: true
 ---
 
-标签（空格分隔）： Shiro SpringBoot
-
----
-
 在日常项目开发中，权限认证是不可少的模块。比较常用的有Spring Security，或是轻量级的Apache Shiro。相对来说Shiro提供了认证、授权、加密、会话管理、与Web集成、缓存等。这些都是日常会用到的，而且Shiro的API比较简洁，学习成本相对低。接下来将整理一下在SpringBoot中如何集成Shiro：
 
 > * RBAC(Role-Based Access Control )基于角色访问控制
@@ -40,7 +36,8 @@ RBAC基于角色访问控制，在权限设计上用户是基于角色进行权�
 > * **Authorizer** 用户登录时进行账户的权限资源认证
 > * **Realms** 每当执行认证或授权时，shiro会从程序配置的一个或多个Realm中查询
 
-- [x] 新建JAVA类ShiroRealm用于继承Shiro的AuthorizingRealm抽象类，并复写doGetAuthenticationInfo和doGetAuthorizationInfo用于账户和权限的认证。
+新建JAVA类ShiroRealm用于继承Shiro的AuthorizingRealm抽象类，并复写doGetAuthenticationInfo和doGetAuthorizationInfo用于账户和权限的认证。
+
 ```java
 public class ShiroRealm extends AuthorizingRealm {
 
@@ -84,7 +81,8 @@ public class ShiroRealm extends AuthorizingRealm {
 }
 ```
 
-- [x] 在SpringBoot中配置Shiro，配置URL过滤规则
+在SpringBoot中配置Shiro，配置URL过滤规则
+
 ```java
 @Configuration
 public class ShiroConfiguration {
