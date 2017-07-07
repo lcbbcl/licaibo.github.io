@@ -19,7 +19,7 @@ RBAC(Role-Based Access Control )基于角色访问控制，在权限设计上用
 
 ## (二) SpringBoot集成Shiro和配置
 #### 1、导入Shiro依赖
-在pom.xml中加入以下依赖
+在**pom.xml**中加入以下依赖
 
 ```java
 <dependency>
@@ -29,7 +29,7 @@ RBAC(Role-Based Access Control )基于角色访问控制，在权限设计上用
 </dependency>
 ```
 #### 2、配置Shiro
-在配置之前，首先了解一下Shiro中主要功能，并看看它们主要是做什么的。
+在配置之前，首先了解一下**Shiro**中主要功能，并看看它们主要是做什么的。
 
 > * **Subject** 安全视角下与软件交互的实体（用户，第三方服务等等）
 > * **Authenticator** 用户登录时进行账户的认证
@@ -190,7 +190,7 @@ public class ShiroConfiguration {
 ```
 
 ## (三) Shiro的登录和认证
-新建LoginController进行登录验证Shiro。在subject.login(token)这行代码执行的时候，Shiro会回调我们上面实现的ShiroRealm进行账户认证和权限认证。
+新建**LoginController**进行登录验证**Shiro**。在**subject.login(token)**这行代码执行的时候，**Shiro**会回调我们上面实现的**ShiroRealm**进行账户认证和权限认证。
 
 ```java
 @RequestMapping("/login")
@@ -229,7 +229,7 @@ public class LoginController {
 ```
 
 ## (四) 当前不足点
-到这里Shiro已经可以进行登录验证，在配置中也可以对指定的URL拦截，并通过角色和资源认证才可以访问。但是细心想想，还是有一些不足，在一下节将对其进行优化，主要有以下几点
-> * 不支持AJAX的调用，目前只能重定向页面，这对于一些前后端分离的开发是不满足的
-> * 不支持前台FreeMarker模板页面元素的权限控制，包括按钮、文字等
-> * URL拦截冗余在代码，虽然说SpringBoot提倡JAVA Configuration配置，但我们还是想要单独写到配置文件，例如yml或是properties
+到这里**Shiro**已经可以进行登录验证，在配置中也可以对指定的**UR**L拦截，并通过角色和资源认证才可以访问。但是细心想想，还是有一些不足，在一下节将对其进行优化，主要有以下几点
+> * **不支持AJAX的调用，目前只能重定向页面，这对于一些前后端分离的开发是不满足的**
+> * **不支持前台FreeMarker模板页面元素的权限控制，包括按钮、文字等**
+> * **URL拦截冗余在代码，虽然说SpringBoot提倡JAVA Configuration配置，但我们还是想要单独写到配置文件，例如yml或是properties**
