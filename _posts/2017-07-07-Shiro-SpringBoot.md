@@ -14,7 +14,7 @@ pulished: true
 > * **当前不足点**
 
 ## (一) RBAC介绍
-RBAC(Role-Based Access Control )基于角色访问控制，在权限设计上用户是基于角色进行权限认证，而角色又是和资源相关联的。这样在设计和管理上简化了权限的操作，它们都是层级依赖，更方便我们的管理。如此一来，数据库表设计可以如下图：
+**RBAC(Role-Based Access Control )**基于角色访问控制，在权限设计上用户是基于角色进行权限认证，而角色又是和资源相关联的。这样在设计和管理上简化了权限的操作，它们都是层级依赖，更方便我们的管理。如此一来，数据库表设计可以如下图：
 ![cmd-markdown-logo](https://licaibo.github.io/assets/img/RBAC.png)
 
 ## (二) SpringBoot集成Shiro和配置
@@ -34,7 +34,7 @@ RBAC(Role-Based Access Control )基于角色访问控制，在权限设计上用
 > * **Subject** 安全视角下与软件交互的实体（用户，第三方服务等等）
 > * **Authenticator** 用户登录时进行账户的认证
 > * **Authorizer** 用户登录时进行账户的权限资源认证
-> * **Realms** 每当执行认证或授权时，shiro会从程序配置的一个或多个Realm中查询
+> * **Realms每当执行认证或授权时，shiro会从程序配置的一个或多个Realm中查询**
 
 新建**JAVA**类**ShiroRealm**用于继承**Shiro**的**AuthorizingRealm**抽象类，并复写**doGetAuthenticationInfo**和**doGetAuthorizationInfo**用于账户和权限的认证。
 
