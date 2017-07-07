@@ -161,7 +161,7 @@ public class ShiroRolesFilter extends RolesAuthorizationFilter {
     }
 ```
 **可以看到我们用的是LinkedHashMap将我们写的ShiroLoginFilter、ShiroPermsFilter、ShiroRolesFilter存储起来并设置。这代表用户每一次URL请求，都会按顺序的经过ShiroLoginFilter -> ShiroPermsFilter -> ShiroRolesFilter处理，只有全部都通过认证才会请求成功，否则将返回JSON或是重定向。这样Shiro既能兼容普通请求的重定向，也能在AJAX时返回JSON，流程图如下：**
-![cmd-markdown-logo](http://img.blog.csdn.net/20170602094138419?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxNDA0MjE0Ng==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+![cmd-markdown-logo](https://licaibo.github.io/assets/img/Shiro.png)
 
 ## (二) 支持FreeMarker模板
 **Shiro本身是通提供了JSP的一套标签库，用于在JSP进行权限的控制，对FreeMarker官方是没有提供。但是有大神将其开源到了GitHub，参考[shiro-freemarker-tags](https://github.com/jagregory/shiro-freemarker-tags)。下面讲述的是，在SpringBoot项目中使用shiro-freemarker-tags**
