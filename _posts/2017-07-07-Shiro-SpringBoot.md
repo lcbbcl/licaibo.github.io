@@ -36,7 +36,7 @@ RBAC(Role-Based Access Control )基于角色访问控制，在权限设计上用
 > * **Authorizer** 用户登录时进行账户的权限资源认证
 > * **Realms** 每当执行认证或授权时，shiro会从程序配置的一个或多个Realm中查询
 
-新建JAVA类ShiroRealm用于继承Shiro的AuthorizingRealm抽象类，并复写doGetAuthenticationInfo和doGetAuthorizationInfo用于账户和权限的认证。
+新建**JAVA**类**ShiroRealm**用于继承**Shiro**的**AuthorizingRealm**抽象类，并复写**doGetAuthenticationInfo**和**doGetAuthorizationInfo**用于账户和权限的认证。
 
 ```java
 public class ShiroRealm extends AuthorizingRealm {
@@ -81,7 +81,7 @@ public class ShiroRealm extends AuthorizingRealm {
 }
 ```
 
-在SpringBoot中配置Shiro，配置URL过滤规则
+在**SpringBoot**中配置**Shiro**，配置**URL**过滤规则
 
 ```java
 @Configuration
