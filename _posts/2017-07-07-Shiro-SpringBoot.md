@@ -8,16 +8,16 @@ pulished: true
 
 在日常项目开发中，权限认证是不可少的模块。比较常用的有Spring Security，或是轻量级的Apache Shiro。相对来说Shiro提供了认证、授权、加密、会话管理、与Web集成、缓存等。这些都是日常会用到的，而且Shiro的API比较简洁，学习成本相对低。接下来将整理一下在SpringBoot中如何集成Shiro：
 
-> * RBAC(Role-Based Access Control )基于角色访问控制
-> * SpringBoot集成Shiro和配置
-> * Shiro的登录和认证
-> * 当前不足点
+> * **RBAC介绍**
+> * **SpringBoot集成Shiro和配置**
+> * **Shiro的登录和认证**
+> * **当前不足点**
 
 ## (一) RBAC介绍
-RBAC基于角色访问控制，在权限设计上用户是基于角色进行权限认证，而角色又是和资源相关联的。这样在设计和管理上简化了权限的操作，它们都是层级依赖，更方便我们的管理。如此一来，数据库表设计可以如下图：
+RBAC(Role-Based Access Control )基于角色访问控制，在权限设计上用户是基于角色进行权限认证，而角色又是和资源相关联的。这样在设计和管理上简化了权限的操作，它们都是层级依赖，更方便我们的管理。如此一来，数据库表设计可以如下图：
 ![cmd-markdown-logo](https://licaibo.github.io/assets/img/RBAC.png)
 
-##(二) SpringBoot集成Shiro和配置
+## (二) SpringBoot集成Shiro和配置
 #### 1、导入Shiro依赖
 在pom.xml中加入以下依赖
 
