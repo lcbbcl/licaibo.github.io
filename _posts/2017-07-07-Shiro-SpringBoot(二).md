@@ -12,7 +12,7 @@ pulished: true
 > * **URL拦截提取到yml配置文件**
 
 ## (一) 支持AJAX请求
-如果是AJAX请求URL接口，没有登录或是没有权限的时候，我们希望是返回指定的JSON格式，而不是进行页面的重定向。当时这个问题也是困扰很久，好在Shiro在这方面提供了很好的扩展，在google帮助下，我决定使用的方案是重写Shiro提供的Filter过滤器，在没有登录或是角色权限认证失败时进行处理。如果是AJAX请求返回指定JSON，普通请求进行页面的重定向。于是乎我找到如下Shiro Filter的关系图：
+**如果是AJAX请求URL接口，没有登录或是没有权限的时候，我们希望是返回指定的JSON格式，而不是进行页面的重定向。当时这个问题也是困扰很久，好在Shiro在这方面提供了很好的扩展，在google帮助下，我决定使用的方案是重写Shiro提供的Filter过滤器，在没有登录或是角色权限认证失败时进行处理。如果是AJAX请求返回指定JSON，普通请求进行页面的重定向。于是乎我找到如下Shiro Filter的关系图：**
 
 ![cmd-markdown-logo](http://img.blog.csdn.net/20170601195007717?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxNDA0MjE0Ng==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
@@ -89,7 +89,7 @@ public class FilterUtils {
 }
 ```
 
-### (3) 重写PermissionsAuthorizationFilter过滤器的onAccessDenied方法
+### (3) 重写PermissionsAuthorizationFilter
 ```java
 public class ShiroPermsFilter extends PermissionsAuthorizationFilter {
 
@@ -108,7 +108,7 @@ public class ShiroPermsFilter extends PermissionsAuthorizationFilter {
 }
 ```
 
-### (5) 重写RolesAuthorizationFilter过滤器的onAccessDenied方法
+### (4) 重写RolesAuthorizationFilter过滤器
 ```java
 public class ShiroRolesFilter extends RolesAuthorizationFilter {
     /**
@@ -126,7 +126,7 @@ public class ShiroRolesFilter extends RolesAuthorizationFilter {
 }
 ```
 
-### (4) 在上一节Shiro配置类ShiroConfiguration对我们重写的Filter过滤器进行配置，修改如下
+### (5) 在上一节Shiro配置类ShiroConfiguration对我们重写的Filter过滤器进行配置，修改如下
 ```java
 
     //增加ShiroLoginFilter实例化
@@ -160,11 +160,11 @@ public class ShiroRolesFilter extends RolesAuthorizationFilter {
         return shiroFilterFactoryBean;
     }
 ```
-可以看到我们用的是LinkedHashMap将我们写的ShiroLoginFilter、ShiroPermsFilter、ShiroRolesFilter存储起来并设置。这代表用户每一次URL请求，都会按顺序的经过ShiroLoginFilter -> ShiroPermsFilter -> ShiroRolesFilter处理，只有全部都通过认证才会请求成功，否则将返回JSON或是重定向。这样Shiro既能兼容普通请求的重定向，也能在AJAX时返回JSON，流程图如下：
+**可以看到我们用的是LinkedHashMap将我们写的ShiroLoginFilter、ShiroPermsFilter、ShiroRolesFilter存储起来并设置。这代表用户每一次URL请求，都会按顺序的经过ShiroLoginFilter -> ShiroPermsFilter -> ShiroRolesFilter处理，只有全部都通过认证才会请求成功，否则将返回JSON或是重定向。这样Shiro既能兼容普通请求的重定向，也能在AJAX时返回JSON，流程图如下：**
 ![cmd-markdown-logo](http://img.blog.csdn.net/20170602094138419?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxNDA0MjE0Ng==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
 ## (二) 支持FreeMarker模板
-Shiro本身是通提供了JSP的一套标签库，用于在JSP进行权限的控制，对FreeMarker官方是没有提供。但是有大神将其开源到了GitHub，参考[shiro-freemarker-tags](https://github.com/jagregory/shiro-freemarker-tags)。下面讲述的是，在SpringBoot项目中使用shiro-freemarker-tags
+**Shiro本身是通提供了JSP的一套标签库，用于在JSP进行权限的控制，对FreeMarker官方是没有提供。但是有大神将其开源到了GitHub，参考[shiro-freemarker-tags](https://github.com/jagregory/shiro-freemarker-tags)。下面讲述的是，在SpringBoot项目中使用shiro-freemarker-tags**
 ### (1) 在pom.xml中导入依赖
 ```java
 <dependency>
@@ -212,7 +212,7 @@ public class FreeMarkerConfig implements InitializingBean {
 ```
 
 ## (三) URL拦截提取到yml配置文件
-之前在ShiroConfiguration配置类的shiroFilterFactoryBean方法中，我们拦截的URL使用LinkedHashMap写在了代码里面，这样后期维护和可观性不够好，我们可以把URL的拦截单独提取到yml配置文件。这里不选择properties文件，是因为properties文件是不支持有序的，这里URL的顺序请务必保持有序的加载。
+**之前在ShiroConfiguration配置类的shiroFilterFactoryBean方法中，我们拦截的URL使用LinkedHashMap写在了代码里面，这样后期维护和可观性不够好，我们可以把URL的拦截单独提取到yml配置文件。这里不选择properties文件，是因为properties文件是不支持有序的，这里URL的顺序请务必保持有序的加载。**
 ### (1) 在yml文件中配置我们的URL拦截规则
 ```xml
 shiro:
