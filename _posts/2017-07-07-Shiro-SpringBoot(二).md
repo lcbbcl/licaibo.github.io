@@ -89,7 +89,7 @@ public class FilterUtils {
 }
 ```
 
-### (3) 重写PermissionsAuthorizationFilter
+### (3) 重写PermissionsAuthorizationFilter过滤器
 ```java
 public class ShiroPermsFilter extends PermissionsAuthorizationFilter {
 
