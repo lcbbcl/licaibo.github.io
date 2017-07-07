@@ -28,7 +28,7 @@ RBAC(Role-Based Access Control )基于角色访问控制，在权限设计上用
         <version>1.2.5</version>
 </dependency>
 ```
-### 2、配置Shiro
+#### 2、配置Shiro
 在配置之前，首先了解一下Shiro中主要功能，并看看它们主要是做什么的。
 
 > * **Subject** 安全视角下与软件交互的实体（用户，第三方服务等等）
