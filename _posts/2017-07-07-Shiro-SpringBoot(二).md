@@ -247,7 +247,7 @@ public class ShiroUrlStrategy {
 }
 ```
 
-### (3) 修改ShiroConfiguration配置类的shiroFilterFactoryBean方法
+### (3) 修改ShiroConfiguration配置的shiroFilterFactoryBean方法
 ```java
 //修改shiroFilterFactoryBean配置
     @Bean(name = "shiroFilter")
