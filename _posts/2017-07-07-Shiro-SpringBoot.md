@@ -6,7 +6,7 @@ location: 海南 海口
 pulished: true
 ---
 
-在日常项目开发中，权限认证是不可少的模块。比较常用的有Spring Security，或是轻量级的Apache Shiro。相对来说Shiro提供了认证、授权、加密、会话管理、与Web集成、缓存等。这些都是日常会用到的，而且Shiro的API比较简洁，学习成本相对低。接下来将整理一下在SpringBoot中如何集成Shiro：
+前不久负责项目中刚好也使用了Shiro做权限控制，趁着空闲期想把之前做的整理一下。在日常项目开发中，权限认证是不可少的模块。比较常用的有Spring Security，或是轻量级的Apache Shiro。相对来说Shiro提供了认证、授权、加密、会话管理、与Web集成、缓存等。这些都是日常会用到的，而且Shiro的API比较简洁，学习成本相对低。接下来将整理一下在SpringBoot中如何集成Shiro：
 
 > * **RBAC介绍**
 > * **SpringBoot集成Shiro和配置**
