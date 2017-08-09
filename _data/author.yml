@@ -12,7 +12,7 @@ workHistory:
   title: JAVA 开发工程师
   started: 2017
   duration: (2017.03 - 至今)
-  description: 医疗云开发
+  description: 基于SpringCloud医疗云分布式开发，提供服务治理、配置中心、服务注册中心、服务的负载均衡。
 
 - work2:
   company: 深圳易库易有限公司
@@ -20,7 +20,7 @@ workHistory:
   title: JAVA 开发工程师
   started: 2015
   duration: (2015.8 - 2017.02)
-  description: 负责电商平台功能和爬虫数据抓取
+  description: 负责电商平台功能；支付合作平台；爬虫抓取提供应商数据提供给产品库
 
 - work1:
   company: 北京开科唯识有限公司(深圳)
@@ -52,8 +52,14 @@ programmingSkills:
 - MySQL:
   name: mysql
   percentage: 80%
+- Mongodb:
+  name: mongodb
+  percentage: 70%
 - SpringBoot:
   name: SpringBoot
+  percentage: 80%
+- SpringCloud:
+  name: SpringCloud
   percentage: 80%
 - WebMagic:
   name: WebMagic
