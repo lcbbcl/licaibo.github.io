@@ -6,7 +6,7 @@ location: 海南 东方
 pulished: true
 ---
 
-**自己用SpringBoot和SpringCloud也有一年多的时间了，第一次接触到SpringBoot就被它的快速简单搭建给吸引，加上公司之前有做SpringCloud的微服务开发，这里想分享一下SpringCloud搭建简单的微服务，包括搭建注册中心、配置中心，服务的负载均衡调用等等，工程全部都是使用SpringBoot进行搭建，算是一个学习总结吧，代码都会托管在自己GitHub的SpringCloud-Project仓库**
+**自己用SpringBoot和SpringCloud也有一年多的时间了，第一次接触到SpringBoot就被它的快速简单搭建给吸引，加上公司之前有做SpringCloud的微服务开发，这里想分享一下SpringCloud搭建简单的微服务，包括搭建注册中心、配置中心，服务的负载均衡调用等等，工程全部都是使用SpringBoot进行搭建，算是一个学习总结吧，代码都托管在自己GitHub的SpringCloud-Project仓库**
 
 ## 注册中心Eureka搭建
 
@@ -72,7 +72,8 @@ public class EurekaServerApplication {
     }
 }
 ```
-> *  **增加配置文件application.yml**
+> * **增加配置文件application.yml**
+
 ```java
 server:
   port: 8765
