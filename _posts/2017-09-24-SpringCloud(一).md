@@ -7,15 +7,13 @@ pulished: true
 ---
 
 ## 前言
+
 **自己用SpringBoot和SpringCloud也有一年多的时间了，第一次接触到SpringBoot就被它的快速简单搭建给吸引，加上公司之前有做SpringCloud的微服务开发，这里想分享一下SpringCloud搭建简单的微服务，包括搭建注册中心、配置中心，服务的负载均衡调用等等，工程全部都是使用SpringBoot进行搭建，算是一个学习总结吧，代码都会托管在自己GitHub的SpringCloud-Project仓库**
 
 ## 注册中心Eureka搭建
+
 **当我们的系统都被拆分成一个个细小的服务时，对于服务的统一治理则是我们构建微服务架构的首选，所有的服务都围绕着eureka进行注册、下线，大致上可以如下图所示：**
 ![cmd-markdown-logo](https://licaibo.github.io/assets/img/eureka.png)
-
-
-                      摘自 【Spring Cloud微服务实战】 - 翟永超
-
 
 
 
