@@ -83,7 +83,7 @@ spring:
           password: xxx
 ```
 
-> *  **启动eureka-server，接着再启动config-server。到eureka注册中心查看，会发现config服务的注册信息**
+> *  **启动eureka-server，接着启动config-server。查看eureka注册中心，会发现config服务的注册信息**
 
 ![cmd-markdown-logo](https://licaibo.github.io/assets/img/eureka-info.png)
 
