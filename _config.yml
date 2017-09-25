@@ -29,7 +29,3 @@ kramdown:
     coderay_tab_width: 4
     coderay_bold_every: 10
     coderay_css: style
-
-#分页配置
-paginate: 2
-paginate_path: "page:num"
