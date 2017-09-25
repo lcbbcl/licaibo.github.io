@@ -1,6 +1,6 @@
 ---
 layout: post_layout
-title: SpringCloud构建微服务（一） 配置中心
+title: SpringCloud构建微服务（二） 配置中心
 time: 2017年09月25日 星期一
 location: 海南 东方
 pulished: true
