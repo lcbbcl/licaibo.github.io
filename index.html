@@ -65,7 +65,7 @@ layout: blog_layout
     {% endfor %}
 
     {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+    <a href="{{ paginator.next_page_path | prepend: '' | replace: '//', '/' }}">Next &raquo;</a>
     {% else %}
     <span>Next &raquo;</span>
     {% endif %}
