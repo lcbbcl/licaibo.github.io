@@ -31,5 +31,5 @@ kramdown:
     coderay_css: style
 
 #每页显示5篇
-paginate: 3
+paginate: 1
 paginate_path: page:num
