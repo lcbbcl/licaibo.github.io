@@ -2,13 +2,24 @@
 layout: blog_layout
 ---
 
-{% for post in site.posts %}
-    <section class="smenu">
-        {{ post.time  | date: "%Y/%m/%d" }}
-        &nbsp;&nbsp;
-        <a href="{{post.url}}">
-            <span class="glyphicon glyphicon-hand-right">  </span>
-            &nbsp;&nbsp; {{post.title}} &nbsp;&nbsp; 
-        </a>
-    </section>
+<!--{% for post in site.posts %}-->
+    <!--<section class="smenu">-->
+        <!--{{ post.time  | date: "%Y/%m/%d" }}-->
+        <!--&nbsp;&nbsp;-->
+        <!--<a href="{{post.url}}">-->
+            <!--<span class="glyphicon glyphicon-hand-right">  </span>-->
+            <!--&nbsp;&nbsp; {{post.title}} &nbsp;&nbsp; -->
+        <!--</a>-->
+    <!--</section>-->
+<!--{% endfor %}-->
+
+<!-- 遍历分页后的文章 -->
+{% for post in paginator.posts %}
+<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+<p class="author">
+    <span class="date">{{ post.date }}</span>
+</p>
+<div class="content">
+    {{ post.content }}
+</div>
 {% endfor %}
