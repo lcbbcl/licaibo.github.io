@@ -30,5 +30,5 @@ kramdown:
     coderay_bold_every: 10
     coderay_css: style
 
-paginate: 1
+paginate: 3
 paginate_path: page:num
