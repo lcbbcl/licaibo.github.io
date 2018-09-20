@@ -11,7 +11,7 @@ workHistory:
   location: 中国，海南
   title: JAVA 开发工程师
   started: 2017
-  duration: (2017.03 - 2018.06)
+  duration:
   description: 基于SpringCloud医疗云分布式开发，提供服务治理、配置中心、服务注册中心、服务的负载均衡。
 
 - work1:
@@ -19,7 +19,7 @@ workHistory:
   location: 中国，深圳
   title: JAVA 开发工程师
   started: 2015
-  duration: (2015.01 - 2017.02)
+  duration:
   description: 负责电商平台功能；支付合作平台；爬虫抓取提供应商数据提供给产品库
 
 
