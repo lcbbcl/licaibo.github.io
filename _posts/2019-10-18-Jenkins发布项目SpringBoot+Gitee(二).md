@@ -1,6 +1,6 @@
 ---
 layout: post_layout
-title: 2019-10-18-Jenkins发布项目SpringBoot+Gitee(二)
+title: Jenkins发布项目SpringBoot+Gitee(二)
 time: 2019年10月18日 星期五
 location: 海南 海口
 pulished: true
