@@ -1,6 +1,6 @@
 ---
 layout: post_layout
-title: 2019-10-18-Jenkins发布项目SpringBoot+Gitee
+title: 2019-10-18-Jenkins发布项目SpringBoot+Gitee(二)
 time: 2019年10月18日 星期五
 location: 海南 海口
 pulished: true
@@ -24,7 +24,7 @@ pulished: true
 ![cmd-markdown-logo](https://licaibo.github.io/assets/img/jenkins-gitee2.png)
 
 > * **编写shell脚本关闭项目、备份包、启动项目**
-**注意：要求服务启动之前加上 BUILD_ID=dontKillMe，名字可以任意取。原理：jenkins默认会在构建完成后杀掉构建过程中又jenkins中shell命令触发的衍生进程。jenkins根据BUILD_ID识别某个进程是否为构建过程的衍生进程，故修改BUILD_ID后，jenkins就无法识别是否为衍生进程，则此进程能在后台保留运行**
+**注意：要求服务启动之前加上 BUILD_ID=dontKillMe，名字可以任意取。原理：jenkins默认会在构建完成后杀掉构建过程中的shell命令触发的衍生进程。jenkins根据BUILD_ID识别某个进程是否为构建过程的衍生进程，故修改BUILD_ID后，jenkins就无法识别是否为衍生进程，则此进程能在后台保留运行**
 
 ```shell
 echo "开始构建"
