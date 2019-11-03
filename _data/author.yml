@@ -2,10 +2,18 @@
 name: 李才波
 title: JAVA 开发工程师
 address: 中国, 海南
-email: 871107274@qq.com
+email: caibo.li@foxmail.com
 github: https://github.com/licaibo
 gavatar: /assets/img/avatar.JPG
 workHistory:
+- work2:
+  company: 海南智慧城科技有限公司
+  location: 中国，海南
+  title: JAVA 开发工程师
+  started: 2018-至今
+  duration:
+  description: 物业智慧社区开发。
+
 - work2:
   company: 海南鹰海网络信息技术有限公司
   location: 中国，海南
