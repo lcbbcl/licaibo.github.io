@@ -5,30 +5,30 @@ address: 中国, 海南
 email: caibo.li@foxmail.com
 github: https://github.com/licaibo
 gavatar: /assets/img/avatar.JPG
-workHistory:
-- work3:
-  company: 海南智慧城科技有限公司
-  location: 中国，海南
-  title: JAVA 开发工程师
-  started: 2018-至今
-  duration:
-  description: 物业智慧社区开发。
-
-- work2:
-  company: 海南鹰海网络信息技术有限公司
-  location: 中国，海南
-  title: JAVA 开发工程师
-  started: 2017
-  duration:
-  description: 医疗云相关开发。
-
-- work1:
-  company: 深圳易库易有限公司
-  location: 中国，深圳
-  title: JAVA 开发工程师
-  started: 2015
-  duration:
-  description: 电商平台功能开发。
+#workHistory:
+#- work3:
+#  company: 海南智慧城科技有限公司
+#  location: 中国，海南
+#  title: JAVA 开发工程师
+#  started: 2018-至今
+#  duration:
+#  description: 物业智慧社区开发。
+#
+#- work2:
+#  company: 海南鹰海网络信息技术有限公司
+#  location: 中国，海南
+#  title: JAVA 开发工程师
+#  started: 2017
+#  duration:
+#  description: 医疗云相关开发。
+#
+#- work1:
+#  company: 深圳易库易有限公司
+#  location: 中国，深圳
+#  title: JAVA 开发工程师
+#  started: 2015
+#  duration:
+#  description: 电商平台功能开发。
 
 
 educationHistory:
