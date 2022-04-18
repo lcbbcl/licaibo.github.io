@@ -4,47 +4,47 @@ layout: author_layout
 <div class="container">
     <div class="row-center">
         <div class="col-md-7">
-            {% if site.data.author.workHistory %}
-                <h3 class="title with-icon"><span class="glyphicon glyphicon-plane cat-title"></span>Work History</h3>
-                <ul class="timeline">
-                    {% for work in site.data.author.workHistory %}
-                        <li class="timeline-inverted">
-                            {% if work.started %}
-                                <div class="timeline-badge info">{{ work.started }}</div>
-                            {% endif %}
-                            <div class="timeline-panel grid-block">
-                                <div class="timeline-heading">
-                                    {% if work.company %}
-                                        <h4 class="timeline-title">{{ work.company }} </h4>
-                                    {% endif %}
-                                    <p>
-                                        <small class="text-muted">
-                                            {% if work.title %}
-                                                {{ work.title }}
-                                            {% endif %}
-                                        </small>
-                                    </p>
-                                    <p>
-                                        <small class="text-muted">
-                                            {% if work.duration %}
-                                                <i class="fa fa-calendar"></i> {{ work.duration }} |
-                                            {% endif %}
-                                            {% if work.location %}
-                                                <i class="fa fa-map-marker"></i>  {{ work.location }}
-                                            {% endif %}
-                                        </small>
-                                    </p>
-                                </div>
-                                <div class="timeline-body">
-                                    {% if work.description %}
-                                        <p>{{ work.description }}</p>
-                                    {% endif %}
-                                </div>
-                            </div>
-                        </li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
+<!--            {% if site.data.author.workHistory %}-->
+<!--                <h3 class="title with-icon"><span class="glyphicon glyphicon-plane cat-title"></span>Work History</h3>-->
+<!--                <ul class="timeline">-->
+<!--                    {% for work in site.data.author.workHistory %}-->
+<!--                        <li class="timeline-inverted">-->
+<!--                            {% if work.started %}-->
+<!--                                <div class="timeline-badge info">{{ work.started }}</div>-->
+<!--                            {% endif %}-->
+<!--                            <div class="timeline-panel grid-block">-->
+<!--                                <div class="timeline-heading">-->
+<!--                                    {% if work.company %}-->
+<!--                                        <h4 class="timeline-title">{{ work.company }} </h4>-->
+<!--                                    {% endif %}-->
+<!--                                    <p>-->
+<!--                                        <small class="text-muted">-->
+<!--                                            {% if work.title %}-->
+<!--                                                {{ work.title }}-->
+<!--                                            {% endif %}-->
+<!--                                        </small>-->
+<!--                                    </p>-->
+<!--                                    <p>-->
+<!--                                        <small class="text-muted">-->
+<!--                                            {% if work.duration %}-->
+<!--                                                <i class="fa fa-calendar"></i> {{ work.duration }} |-->
+<!--                                            {% endif %}-->
+<!--                                            {% if work.location %}-->
+<!--                                                <i class="fa fa-map-marker"></i>  {{ work.location }}-->
+<!--                                            {% endif %}-->
+<!--                                        </small>-->
+<!--                                    </p>-->
+<!--                                </div>-->
+<!--                                <div class="timeline-body">-->
+<!--                                    {% if work.description %}-->
+<!--                                        <p>{{ work.description }}</p>-->
+<!--                                    {% endif %}-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                    {% endfor %}-->
+<!--                </ul>-->
+<!--            {% endif %}-->
             {% if site.data.author.educationHistory %}
                 <h3 class="title with-icon"><span class="fa fa-book cat-title"></span>Education History</h3>
                 <ul class="timeline">
